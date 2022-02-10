@@ -62,5 +62,20 @@ function generatePassword() {
       userPassword = userPassword + capLetters;
       console.log(userPassword);
     }
+    //if none selected, restart process
+    if (userPassword == false) {
+      alert(
+        "Please select at least one category of characters to add to your password!"
+      );
+      return;
+    }
+    //with the selected characters, pick random characters at the selected length
+    for (var i = 0; i < passwordLength; i++) {
+      newPassword =
+        newPassword +
+        userPassword.charAt(Math.floor(Math.random() * userPassword.length));
+    }
+    console.log(newPassword);
+    return newPassword; //gives the user the password
   }
 }
