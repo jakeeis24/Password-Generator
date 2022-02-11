@@ -21,7 +21,7 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   //keeping the password undefined
   var newPassword = "";
-
+  var userPassword = "";
   // password length prompt
   var passwordLength = prompt("Length must be between 8 and 128 characters.");
 
@@ -35,9 +35,6 @@ function generatePassword() {
     if (numbersConfirm) {
       //if true, numbers will be added to the userPassword
       userPassword = userPassword + numbers;
-    } else {
-      // if false, numbers will be left out of the password
-      userPassword = userPassword;
     }
     console.log(userPassword);
     //does user want special characters included
@@ -47,9 +44,6 @@ function generatePassword() {
     //if true special characters will be added to the user password
     if (symbols) {
       userPassword = userPassword + specialChars;
-    } else {
-      // if false, special characters will be left out of the password
-      userPassword = userPassword;
     }
     console.log(userPassword);
     //does the user want lowercase letters included
@@ -59,9 +53,6 @@ function generatePassword() {
     //if true lowercase letter will be added to the user password
     if (lowCaseLetters) {
       userPassword = userPassword + letters;
-    } else {
-      // if false, lowercase letters will be left out of the password
-      userPassword = userPassword;
     }
     console.log(userPassword);
     //does the user want capital letters included
@@ -69,9 +60,6 @@ function generatePassword() {
     //if true capital letters will be added to the user password
     if (bigLetters) {
       userPassword = userPassword + capLetters;
-    } else {
-      // if false, capital letters will be left out of the password
-      userPassword = userPassword;
     }
     console.log(userPassword);
     //if none selected, restart process
@@ -91,7 +79,7 @@ function generatePassword() {
     console.log(newPassword);
     console.log(userPassword);
     return newPassword; //gives the user the password
-    reset;
+    //reset;
   }
 }
 
